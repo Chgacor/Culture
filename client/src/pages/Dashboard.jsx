@@ -79,7 +79,7 @@ export default function Dashboard() {
       </aside>
 
       <main className="ml-64 pt-10 px-10 pb-10 min-h-screen">
-        {activeMenu === 'character' && <CharacterTab userData={userData} setActiveMenu={setActiveMenu} />}
+        {activeMenu === 'character' && <CharacterTab userData={userData} setActiveMenu={setActiveMenu} refreshData={fetchUserData} />}
         {activeMenu === 'quests' && <QuestsTab userData={userData} refreshData={fetchUserData} />}
         {activeMenu === 'calendar' && <CalendarTab tasks={[]} />}
         {activeMenu === 'wealth' && <WealthTab userData={userData} />}
